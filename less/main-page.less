@@ -1,0 +1,320 @@
+//Main Page formatting for each sections
+
+//Mobile formatting variable
+@phone: ~"(max-width:500px)";
+
+header{
+    // width: 85%;
+    // //Fixed Header while scrolling
+    // top:0;
+    // position: fixed;
+    // z-index: 3;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+    background-color: rgb(150, 103, 103);
+
+    p{
+        font-family: 'Vollkorn SC', serif;
+        font-weight: bold;
+        font-style: initial;
+        color: white;
+        padding-left: 15px;
+    }
+
+
+    @media @phone{
+        flex-direction: column;
+    }
+}
+
+
+//Nav Links CSS
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size:1.8rem;
+    padding-right: 15px;
+    transition-duration: 0.4s;
+}
+nav a:hover{
+    color: black;
+}
+
+
+.intro{
+    margin-top:80px;//added to work with fixed header
+    text-align: center;
+    
+    @media @phone{
+        h2{
+        padding: 1.2rem 0;
+        font-size: 2.3rem;
+        }
+    }
+    #app-name{
+        font-size: 3.8rem;
+    }
+}
+
+.detail-section{
+
+    
+    h2{
+        text-align: center;
+    @media @phone{
+        font-size: 2.4rem;
+    }
+
+    }
+    img{
+        border-radius: 8px;
+        max-width: 50%;
+        height: auto;
+        @media @phone{
+            max-width: 80%;
+            margin: 0 auto;
+        }
+    }
+    .info-pic{
+        padding: 25px 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-content: center;
+
+    @media @phone{
+        flex-direction: column;
+
+        
+    }
+        .feature-info{
+            margin: 80px 35px;
+            font-size: 1.8rem;
+        
+        @media @phone{
+            margin: 20px 0px;
+        }
+
+            ul{
+            list-style-type: square;
+            }
+        }
+    }
+}
+
+//Styles for Tab component
+
+.section {
+    width: 100%;
+    margin: 45px auto;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+   
+}
+.tabs {
+    width: 100%;
+
+    .tabs-items {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      padding-top: 60px;
+      
+    }
+    .tabs-item {
+      display: none; 
+      width: 75%;
+
+      .tabs-item-title {
+        font-size: 24px;
+        font-weight: bold;
+        padding-bottom: 10px;
+      }
+    }
+    .tabs-item-selected {
+      display: block;
+    }
+  
+    .tabs-links {
+      display: flex;
+      justify-content: space-between;
+      background-color: rgb(150, 103, 103);
+    }
+  
+    .tabs-link {
+      padding: 20px 89px;
+      font-size: 1.8rem;
+      background-color: rgb(150, 103, 103);
+      border-right: 1px solid white;
+      color: white;
+      cursor: pointer;
+      &:hover {
+        background-color: lightcoral;
+      }
+      @media @phone{
+          padding: 20px 20px;
+      }
+    }
+    .tabs-link-selected {
+      z-index: 2;
+      border-right: 1px solid rgb(150, 103, 103);
+      background-color: rgb(240, 209, 209);
+      color: black;
+      &:hover {
+        background-color: rgb(240, 209, 209);
+      }
+    }
+}
+
+.btn{
+    background-color: rgb(150, 103, 103);
+    border: none;
+    width: 100%;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Vollkorn SC', serif;
+    font-weight: bold;
+    font-style: initial; 
+    font-size: 5rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+.btn:hover{
+    background-color:white;
+    color:darkgray;
+    border:1px solid #555555;
+}
+
+.example-section{
+    padding-top:20px;
+
+    text-align: center;
+    .customer{
+        
+        padding: 10px 0;
+        p{
+            font-style: italic;
+        }
+    }
+}
+footer{
+    margin-top:20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    background-color: rgb(150, 103, 103);
+    border-radius: 12px;
+
+    .contact{
+        padding: 10px 0;
+        padding-left: 10px;
+        color: white;
+    }
+
+    .team-link{
+        font-family: 'Vollkorn SC', serif;
+        font-weight: bold;
+        font-style: initial;
+        text-align: center;
+        padding: 10px 0px;
+        font-size: 2rem;
+        
+        a{
+        text-decoration: none;
+        color: white;
+        transition-duration: 0.4s;
+        }
+        a:hover{
+            color:black
+        } 
+    }
+    @media @phone{
+        flex-direction: column;
+        .contact{
+            font-size:2rem;
+            order:2;
+            padding-bottom: 20px;
+        }
+        nav{
+            padding-bottom: 20px;
+            order:3;
+        }
+    }
+}
+
+//Styles for About-Us Page
+
+.about-us-header{
+    h1{
+        
+        font-size: 3.2rem;
+        @media @phone{
+            padding: 20px 0;
+        }
+    }
+    img{
+        width: 13%;
+        padding-left:15px;
+        @media @phone{
+            width: 35%;
+        }
+    }
+    
+}
+
+.team{
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    img{
+        max-width: 20%;
+        padding: 0 25px;
+        @media @phone{
+            max-width: 60%;
+            height: 250px;
+        }
+    }
+    h2,h3{
+        padding-left: 25px;
+    }
+
+    p{
+        margin: 25px 25px;
+        font-style: initial;
+    }
+    a{
+        text-decoration:none;
+        font-style: initial;
+        color: black;
+        border-bottom: 1px dashed black;
+    }
+}
+header h1{
+    text-align: center;
+    font-size: 2.6rem;
+    color: white;
+}
+.alternate{
+    flex-direction: row-reverse;
+}
+.about-us-footer{
+    .contact{
+        font-style: initial;
+        font-size: 1.8rem;
+        padding: 10px 10px;
+    }
+    nav{
+        padding-bottom: 10px;
+    }
+}
